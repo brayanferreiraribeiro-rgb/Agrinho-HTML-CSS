@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avicultura - Sistemas de Criação de Frango</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body> 
+
+    <img class="video-fundo" src="https://www.vencomaticgroup.com/hs-fs/hubfs/x-treck_7.-detail.jpg?width=1110&name=x-treck_7.-detail.jpg" alt="Sistema de Incubação com Galinhas">
+
+    <header>
+        <a href="#" id="configToggle" class="config-btn">⚙</a>
+        <h1>Portal da Avicultura</h1>
+        <p>O que acontece com o frango antes de ser consumido</p>
+        <div id="configPanel" class="config-panel">
+            <div style="display:flex; align-items:center; gap:8px;">
+                <button id="btnFonte" class="config-option">Fonte de texto ▾</button>
+                <div id="fontControls" style="display:none;">
+                    <button id="btnAumentarTexto" class="config-option" style="width:44px;padding:6px;">+</button>
+                    <button id="btnDiminuirTexto" class="config-option" style="width:44px;padding:6px;">-</button>
+                </div>
+            </div>
+            <button id="btnLerPagina" class="config-option">Ler Página</button>
+        </div>
+    </header>
+    <main class="container">
+
+        <div class="conteudo-principal">
+            <!-- TELA 1: Painel Inicial (Lista de Tópicos) -->
+            <div id="tela-principal" class="tela tela-ativa">
+            <h2 style="margin-bottom: 20px; color: #ffffff;">Tipos de Criação de Frango</h2>
+            
+            <article class="artigo">
+                <a href="https://www.robustec.ind.br/blog/sistema-intensivo-na-avicultura-conheca-as-vantagens-e-melhores-praticas/?srsltid=AfmBOoogkAj33GqTt8AJfA3YYCdK2yjpkHQ0NqTKJDbLnTPjvOTfclLf" class="link-topico" target="_blank">1. Sistema Intensivo ➔</a>
+                <p>Confinamento comercial de alta eficiência. Clique para mais informações.</p>
+            </article>
+
+            <article class="artigo">
+                <a href="https://www.afe.com.br/artigos/o-que-e-sistema-semi-intensivo-de-criacao-de-frangos-caipiras?srsltid=AfmBOop7xz0-7oBnqhmIhQa6ZDiCp6l4_n0PBjW_EK7U8TpsWuB6eCI_" class="link-topico" target="_blank">2. Sistema Semi-intensivo ➔</a>
+                <p>Estilo caipira. Clique para mais informações.</p>
+            </article>
+
+            <article class="artigo">
+                <a href="https://www.google.com/search?q=oque+e+modo+avicultura+extensivo&rlz=1C1HKFL_pt-PTBR1215BR1215&sourceid=chrome&ie=UTF-8&aep=48&cud=0&qsubts=1779663220948&source=chrome.crn.obic&safe=active&ssui=on&udm=50&mstk=AUtExfCNW50NVkc0w1ZvrbW1RSJyqFdqXUbMkU4Vl4PJgaKei5h40yDWyXA1gMr6z2zuVIfyLCz0qxuTWTPanid737hu9Rv4z676_06SMGcnypp0PbuYmkvL_d1ottDgUjqz365mrLxEYC-Vk5trPR8AUW1O1e8n97zbkZRUgR8BzXOoHnZycj7GsGYyxk4UoTZoLSf_BlhUmRXmLmIqJI5E3BXsvYLpGICkVWipfzuM77a5WtDtKD09NDgCR3CLxyDj05oMh32kFpv55Q&csuir=1" class="link-topico" target="_blank">3. Sistema Extensivo ➔</a>
+                <p>Totalmente solto. Clique para mais informações.</p>
+            </article>
+
+            <section class="caixa-interativa">
+                <h3>Dica técnica de manejo e biosseguridade</h3>
+                <p style="margin-bottom: 10px;">Clique abaixo para ver um lembrete importante para o seu plantel.</p>
+                <button id="btn-conselho" class="btn">Ver Lembrete Técnico</button>
+            </section>
+        </div>
+
+        <!-- TELA 2: Visualização Dinâmica dos Detalhes (Buscando o arquivo real) -->
+        <div id="tela-detalhes" class="tela">
+            <div class="conteudo-detalhes">
+                <h2 id="detalhes-titulo">Título do Tópico</h2>
+                
+                <!-- O JavaScript vai injetar o texto do arquivo .txt aqui dentro -->
+                <div id="detalhes-texto" class="texto-arquivo">
+                    Carregando arquivo de texto...
+                </div>
+
+                <button class="btn btn-voltar" onclick="voltarParaInicio()">⬅ Voltar para a Lista</button>
+            </div>
+        </div>
+
+        </div>
+        </div>
+
+        <div class="video-youtube">
+            <h3 style="color: white; margin-bottom: 15px;">Educação Avícola</h3>
+            <iframe src="https://www.youtube.com/embed/EC70MKTkVg4" frameborder="0" allowfullscreen></iframe>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Portal Avicultura Tecnológica. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+

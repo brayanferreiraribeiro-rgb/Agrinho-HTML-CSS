@@ -1,0 +1,248 @@
+ style
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            background-color: transparent;
+            color: #333;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        header {
+            background-color:transparent;
+            color: rgb(243, 232, 84);
+            padding: 20px;
+            text-align: left;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .config-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(255,255,255,0.9);
+            color: #2e7d32;
+            border: 2px solid #2e7d32;
+            border-radius: 8px;
+            padding: 8px 14px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.2s, background-color 0.2s, color 0.2s;
+            z-index: 2;
+        }
+
+        .config-btn:hover {
+            transform: translateY(-2px);
+            background-color: #2e7d32;
+            color: white;
+        }
+
+        .video-fundo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            background: #333;
+        }
+
+        .config-panel {
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            width: 220px;
+            background-color: rgba(255,255,255,0.95);
+            border: 1px solid #2e7d32;
+            border-radius: 12px;
+            padding: 10px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+            z-index: 3;
+            display: none;
+        }
+
+        .config-panel.visible {
+            display: block;
+        }
+
+        .config-option {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px 12px;
+            border: none;
+            border-radius: 8px;
+            background-color: #2e7d32;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+
+        .config-option:last-child {
+            margin-bottom: 0;
+        }
+
+        .config-option:hover {
+            background-color: #1b5e20;
+            transform: translateY(-1px);
+        }
+
+        header p {
+            color: #fce041;
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 30px 0 30px 30px;
+            padding: 0 20px;
+            background-color: rgba(255, 255, 255, 0);
+            border-radius: 8px;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .conteudo-principal {
+            flex: 1;
+        }
+
+        .video-youtube {
+            flex: 0 0 550px;
+            position: sticky;
+            top: 100px;
+        }
+
+        .video-youtube iframe {
+            width: 100%;
+            height: 300px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .tela {
+            display: none;
+        }
+
+        .tela-ativa {
+            display: block;
+        }
+
+        .artigo {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px hsl(0, 100%, 100%);
+            border-top: 4px solid #2e7d32;
+            transition: transform 0.2s, box-shadow 0.2s;
+            animation: flutuacao 1.5s ease-in-out infinite;
+        }
+
+        .artigo:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .link-topico {
+            color: #2e7d32;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.3rem;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .link-topico:hover {
+            text-decoration: underline;
+        }
+
+        .conteudo-detalhes {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .conteudo-detalhes h2 {
+            color: #2e7d32;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e8f5e9;
+            padding-bottom: 10px;
+        }
+
+        .texto-arquivo {
+            white-space: pre-line;
+            font-size: 1.1rem;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .caixa-interativa {
+            background-color: #e8f5e9;
+            border-left: 5px solid #2e7d32;
+            padding: 20px;
+            border-radius: 4px;
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        @keyframes flutuacao {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .btn {
+            background-color: #2e7d32;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.2s;
+            font-weight: bold;
+            animation: flutuacao 2s ease-in-out infinite;
+        }
+
+        .btn:hover {
+            background-color: #1b5e20;
+        }
+
+        .btn-voltar {
+            background-color: #757575;
+        }
+
+        .btn-voltar:hover {
+            background-color: #424242;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            color: #ccc;
+            font-size: 0.9rem;
+            margin-top: 40px;
+        }
