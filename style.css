@@ -55,6 +55,7 @@
             object-fit: cover;
             z-index: -1;
             background: #333;
+            filter: blur(5px);
         }
 
         .config-panel {
